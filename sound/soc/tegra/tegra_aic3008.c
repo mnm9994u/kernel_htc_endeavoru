@@ -53,7 +53,7 @@
 #define PWR_DEVICE_TAG LOG_TAG
 
 #undef AUDIO_DEBUG
-#define AUDIO_DEBUG 0
+#define AUDIO_DEBUG 1
 
 #if AUDIO_DEBUG
 #define AUD_DBG(fmt, ...) pr_tag_info(LOG_TAG, fmt, ##__VA_ARGS__);
@@ -189,6 +189,14 @@ static void tegra_audio_route(struct snd_soc_codec *audio_data,
 		break;
 
 	case AIC3008_IO_CONFIG_MEDIA:
+// maxwen TODO
+#if 0
+        if (idx == 20 ){
+            idx = 9;
+        } else if( idx == 7 ){
+            return;
+        }
+#endif
 		AUD_DBG("tegra_audio_route, AIC3008_IO_CONFIG_MEDIA, idx = %d, call mode %d \n",
 				idx, audio_data->is_call_mode);
 		aic3008_setMode(cmd, idx, audio_data->is_call_mode);
@@ -695,3 +703,4 @@ MODULE_AUTHOR("Kuowei Li <kuowei_li@htc.com>");
 MODULE_DESCRIPTION("Tegra+AIC3008 machine ASoC driver");
 MODULE_LICENSE("GPL");
 MODULE_ALIAS("platform:" DRV_NAME);
+
