@@ -244,7 +244,7 @@ obj-${CONFIG_MACH_ENDEAVORU}               += tegra_flashlight.o
 obj-${CONFIG_MACH_ENDEAVORU}               += board-endeavoru-camera.o
 
 obj-${CONFIG_MACH_ENDEAVORTD}               += board-endeavortd.o
-obj-${CONFIG_MACH_ENDEAVORTD}               += board-endeavor-panel.o
+obj-${CONFIG_MACH_ENDEAVORTD}               += board-endeavoru-panel.o
 obj-${CONFIG_MACH_ENDEAVORTD}               += board-endeavortd-pinmux.o
 obj-${CONFIG_MACH_ENDEAVORTD}               += board-endeavortd-sdhci.o
 obj-${CONFIG_MACH_ENDEAVORTD}               += board-endeavortd-memory.o
